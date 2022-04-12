@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        h1#TT
+        {
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = "TT">
+        Calculadora
+    </h1>
+    <p></p>
+    <p id = "conta"></p>
+    <p></p>
+    <input type="button" value="1" onclick="N1()" id = "n1"> 
+    | <input type="button" value="2" onclick="N2()" id = n2> 
+    | <input type="button" value="3" onclick="N3()" id = "n3"> 
+    | <input type="button" value="+" id = "soma" onclick="somar()">
+    | <input type="button" value=":" id = "divi" onclick="dividir()">
+    <p></p>
+    <input type="button" value="4" onclick="N4()" id = "n4"> 
+    | <input type="button" value="5" onclick="N5()" id = "n5"> 
+    | <input type="button" value="6" onclick="N6()" id = "n6"> 
+    | <input type="button" value="-" id = "sub" onclick="subtrair()">
+    <p></p>
+    <input type="button" value="7" onclick="N7()" id = "n7"> 
+    | <input type="button" value="8" onclick="N8()" id = "n8"> 
+    | <input type="button" value="9" onclick="N9()" id = "n9">
+    
+    | <input type="button" value = "*" id = "multi" onclick="multiplicar()">
+    
+    <p></p>
+    <input type="button" value="0" onclick="N0()" id = "n0" >
+    <p></p>
+    <input type="button" value="Add Number" id = "add" onclick= "addNumber()"> 
+    <p></p>
+    <input type="button" value="reset" id = "RS" onclick="resetar()">
+
+    <script>
+        var calculo = document.getElementById("conta")
+        var num
+        var nr1
+        var nr2 
+        var can = 0
+        var somou
+        function N1()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n1").value
+            calculo.innerHTML += `${num}`
+            }
+            
+        }
+        function N2()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n2").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N3()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n3").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N4()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n4").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N5()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n5").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N6()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n6").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N7()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n7").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N8()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n8").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N9()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n9").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function N0()
+        {
+            if(can == 1 || can == 0)
+            {
+            num = document.getElementById("n0").value
+            calculo.innerText += `${num}`
+            }
+        }
+        function somar()
+        {
+            if(can == 1)
+            {
+                nr2 = Number(calculo.innerText)
+                somou = nr1 + nr2
+                calculo.innerText = `${somou}`
+                can = 2
+            }
+        }
+        function subtrair()
+        {
+            if(can == 1)
+            {
+                nr2 = Number(calculo.innerText)
+                somou = nr1 - nr2
+                calculo.innerText = `${somou}`
+                can = 2
+            }
+        }
+        function multiplicar()
+        {
+            if(can == 1)
+            {
+                nr2 = Number(calculo.innerText)
+                somou = nr1 * nr2
+                calculo.innerText = `${somou}`
+                can = 2
+            }
+        }
+        function dividir()
+        {
+            if(can == 1)
+            {
+                nr2 = Number(calculo.innerText)
+                somou = nr1 / nr2
+                calculo.innerText = `${somou}`
+                can = 2
+            }
+        }
+        function addNumber()
+        {
+            if(can == 0)
+            {
+            nr1 = Number(calculo.innerText)
+            console.log(nr1)
+            can = 1
+            calculo.innerText = ""
+            }
+        }
+        function resetar()
+        {
+            nr1 = 0
+            nr2 = 0
+            calculo.innerText = ""
+            can = 0
+            somou = 0
+        }
+    </script>
+
+</body>
+</html>
